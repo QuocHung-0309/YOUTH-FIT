@@ -7,6 +7,7 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm install -g json-server
 
 # Copy source code and database
 COPY . .
