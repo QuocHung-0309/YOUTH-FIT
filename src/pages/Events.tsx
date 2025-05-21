@@ -52,7 +52,7 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('http://localhost:4000/events');
+        const response = await fetch('https://apidoanhoi.andyanh.id.vn/events');
         const result = await response.json();
         setEvents(result); // json-server trả về mảng thẳng
       } catch (error) {
@@ -99,7 +99,7 @@ const Events = () => {
       setRegistering(true);
       // json-server không hỗ trợ POST tùy biến, bạn cần xử lý backend thật
       // Đây là ví dụ POST demo, bạn có thể bỏ qua hoặc sửa tùy backend
-      const response = await fetch(`http://localhost:4000/events/${selectedEvent.id}`, {
+      const response = await fetch(`https://apidoanhoi.andyanh.id.vn/events/${selectedEvent.id}`, {
         method: 'PATCH', // json-server hỗ trợ PATCH để cập nhật
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

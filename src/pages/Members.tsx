@@ -107,7 +107,7 @@ const Members = () => {
   useEffect(() => {
   const fetchMembers = async () => {
     try {
-      const response = await fetch('http://localhost:4000/members');
+      const response = await fetch('https://apidoanhoi.andyanh.id.vn/members');
       if (!response.ok) {
         throw new Error('Lỗi tải danh sách thành viên');
       }
