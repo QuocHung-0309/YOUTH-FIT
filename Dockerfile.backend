@@ -1,0 +1,18 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy source code and database
+COPY . .
+
+# Expose port 4000
+EXPOSE 4000
+
+# Start json-server
+CMD ["npm", "run", "start"] 
