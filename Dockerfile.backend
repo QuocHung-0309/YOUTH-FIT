@@ -14,5 +14,5 @@ COPY . .
 # Expose port 4000
 EXPOSE 4000
 
-# Start json-server
-CMD ["npm", "run", "start"] 
+# Start json-server with host configuration
+CMD ["json-server", "--watch", "db.json", "--host", "0.0.0.0", "--port", "4000"] 
